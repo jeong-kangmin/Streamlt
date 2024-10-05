@@ -43,4 +43,4 @@ df = px.data.gapminder().query("continent == 'Oceania'")
 df
 
 fig = px.bar(df, x='year' , y='pop')
-fig.show()
+st.plotly_chart(fig)
