@@ -44,3 +44,8 @@ df
 
 fig = px.bar(df, x='year' , y='pop')
 st.plotly_chart(fig)
+
+
+df1 = px.data.gapminder().query("year == 2007")
+fig1 = px.treemap(df1, path=[px.Constant('World'), 'continent','country'], values = 'pop' , color = 'lifeExp')
+st.plotly_chart(fig1)
