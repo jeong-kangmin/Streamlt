@@ -35,3 +35,12 @@ def expensive_computataion(x):
 
 
 result = expensive_computataion(x)
+
+
+
+import plotly.express as px
+df = px.data.gapminder().query("continent == 'Oceania'")
+df
+
+fig = px.bar(data_canada, x='year' , y='pop')
+fig.show()
